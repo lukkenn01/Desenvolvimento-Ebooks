@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mentalidade e Estética</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -192,17 +192,73 @@
     .zap-fixo:hover {
       background: #1ebc59;
     }
+    /* Novo: banner do vídeo */
+    .banner-video {
+      margin-top: -60px;
+      padding: 0;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 30px #007BFF;
+    }
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 */
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 12px;
+    }
+    /* Responsividade */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2em;
+      }
+      h2 {
+        font-size: 1.6em;
+      }
+      .beneficio, .bonus-item {
+        width: 90%;
+      }
+    }
   </style>
 </head>
 <body>
   <div id="particles-js"></div>
+
   <section class="hero" data-aos="fade-in">
+    <!-- Vídeo banner incorporado -->
+    <div class="banner-video" data-aos="fade-in">
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/D55jQZhf9Bc?autoplay=1&mute=1&loop=1&playlist=D55jQZhf9Bc&controls=0&modestbranding=1&showinfo=0"
+          title="Bodybuilding Slow Motion"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
     <h1>Desperte Sua Melhor Versão</h1>
     <p>Ebooks práticos que unem mentalidade e treino para transformar seu corpo e sua rotina — sem enrolação, sem modinha.</p>
     <a href="https://wa.me/5514996966771" class="botao-zap">FALE COMIGO NO WHATSAPP</a>
-    <br>
-    <a href="https://pay.kirvano.com/0b1fc36c-8276-42a4-afb1-fe75453cb8d9" target="_blank" class="botao-checkout">💳 Vagas Limitadas | Aproveite com Desconto Hoje!</a>
+    <br />
+    <a href="https://pay.kirvano.com/0b1fc36c-8276-42a4-afb1-fe75453cb8d9" target="_blank" class="botao-checkout">💳 Comprar Agora | Aproveite com Desconto Hoje!</a>
   </section>
+
   <section class="section" data-aos="fade-in">
     <h2>O que você vai receber</h2>
     <div class="beneficios">
@@ -212,6 +268,7 @@
       <div class="beneficio"><i class="fas fa-utensils"></i> Ebook exclusivo com receitas acessíveis e saudáveis</div>
     </div>
   </section>
+
   <section class="bonus" data-aos="fade-in">
     <h2>Bônus Adicionais Disponíveis</h2>
     <p>Ao adquirir o Ebook principal, você terá acesso a uma seleção de ebooks complementares com conteúdo exclusivo por um valor simbólico. Aproveite para turbinar seu conhecimento e resultados!</p>
@@ -221,16 +278,19 @@
       <div class="bonus-item"><i class="fas fa-brain"></i> Técnicas de mentalidade vencedora</div>
     </div>
   </section>
+
   <section class="autoridade" data-aos="fade-in">
     <h2>Quem Sou Eu?</h2>
     <p>Sou apaixonado por desenvolvimento pessoal, performance e resultados reais. Criei este material com base na minha própria jornada de transformação — e agora quero compartilhar com você tudo que realmente funciona. Seja bem-vindo(a) ao seu próximo nível.</p>
     <a href="https://www.instagram.com/luis1nho.oficial/" target="_blank">🔗 Me siga no Instagram</a>
   </section>
+
   <section class="garantia" data-aos="fade-in">
-    <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Selo de Garantia">
+    <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Selo de Garantia" />
     <h2>Garantia de Satisfação</h2>
     <p>Você tem 7 dias para experimentar. Caso não esteja satisfeito, garantimos seu reembolso total de forma simples e segura.</p>
   </section>
+
   <footer class="footer">
     <p>Todos os Termos Reservados a Kirvano Venda e Distribuição de Produtos Digitais.</p>
     <p>
@@ -238,41 +298,43 @@
       <a href="https://app.kirvano.com/terms-of-use#terms-of-use" target="_blank">Termos de Uso</a>
     </p>
   </footer>
+
   <a href="https://wa.me/5514996966771" class="zap-fixo">💬 Fale agora</a>
+
   <script>
     AOS.init({ duration: 1000 });
     particlesJS("particles-js", {
-      "particles": {
-        "number": { "value": 60 },
-        "color": { "value": "#007BFF" },
-        "shape": { "type": "circle" },
-        "opacity": { "value": 0.3 },
-        "size": { "value": 2 },
-        "line_linked": {
-          "enable": true,
-          "distance": 130,
-          "color": "#007BFF",
-          "opacity": 0.3,
-          "width": 1
+      particles: {
+        number: { value: 60 },
+        color: { value: "#007BFF" },
+        shape: { type: "circle" },
+        opacity: { value: 0.3 },
+        size: { value: 2 },
+        line_linked: {
+          enable: true,
+          distance: 130,
+          color: "#007BFF",
+          opacity: 0.3,
+          width: 1,
         },
-        "move": {
-          "enable": true,
-          "speed": 1.2,
-          "direction": "none",
-          "out_mode": "out"
-        }
-      },
-      "interactivity": {
-        "events": {
-          "onhover": { "enable": true, "mode": "repulse" },
-          "onclick": { "enable": true, "mode": "push" }
+        move: {
+          enable: true,
+          speed: 1.2,
+          direction: "none",
+          out_mode: "out",
         },
-        "modes": {
-          "repulse": { "distance": 80 },
-          "push": { "particles_nb": 4 }
-        }
       },
-      "retina_detect": true
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" },
+        },
+        modes: {
+          repulse: { distance: 80 },
+          push: { particles_nb: 4 },
+        },
+      },
+      retina_detect: true,
     });
   </script>
 </body>
