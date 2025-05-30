@@ -212,11 +212,47 @@
     .zap-fixo:hover {
       background: #1ebc59;
     }
+    @media (max-width: 768px) {
+      .beneficios {
+        flex-direction: column;
+        align-items: center;
+      }
+      .beneficio {
+        width: 100%;
+        max-width: 320px;
+      }
+      .hero h1 {
+        font-size: 2em;
+      }
+      .hero p {
+        font-size: 1em;
+        padding: 0 10px;
+      }
+      .botao-mobile-fixo {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #00cc66;
+        color: white;
+        text-align: center;
+        padding: 18px;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        z-index: 1000;
+      }
+    }
+    @media (min-width: 769px) {
+      .botao-mobile-fixo {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
   <div id="particles-js"></div>
-
   <section class="hero" data-aos="fade-up">
     <h1>Mentalidade e Estética</h1>
     <p>Transcenda sua capacidade de mentalidade, aprenda a potencializar seus treinos, ter foco, disciplina — estes ebooks irão te dar o caminho para uma vida de sucesso. <strong>Desperte a versão mais forte e focada de você mesmo — o seu maior concorrente é você de ontem!</strong></p>
@@ -261,6 +297,7 @@
   </footer>
 
   <a href="https://wa.me/5514996966771" class="zap-fixo">💬 Fale agora</a>
+  <a href="https://pay.kirvano.com/0b1fc36c-8276-42a4-afb1-fe75453cb8d9" class="botao-mobile-fixo">💳 Comprar Agora</a>
 
   <script>
     AOS.init({ duration: 1000 });
