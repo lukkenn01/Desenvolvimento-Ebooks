@@ -8,6 +8,7 @@
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  
   <style>
     * {
       margin: 0;
@@ -55,18 +56,44 @@
       line-height: 1.6;
     }
     .botao-zap {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 15px 30px;
-      background: linear-gradient(90deg, #007BFF, #004080);
-      color: #fff;
-      font-weight: bold;
-      font-size: 1.1em;
-      border-radius: 40px;
-      text-decoration: none;
-      animation: pulse 1.5s infinite;
-      box-shadow: 0 0 15px #007BFF;
-    }
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  background: linear-gradient(90deg, #007BFF, #004080);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1em;
+  border-radius: 40px;
+  text-decoration: none;
+  animation: pulseBlue 1.5s infinite;
+  box-shadow: 0 0 15px #007BFF;
+}
+
+@keyframes pulseBlue {
+  0% { transform: scale(0.98); box-shadow: 0 0 10px #007BFF; }
+  50% { transform: scale(1.02); box-shadow: 0 0 25px #007BFF; }
+  100% { transform: scale(0.98); box-shadow: 0 0 10px #007BFF; }
+}
+
+@keyframes pulseBlue {
+  0% { transform: scale(0.98); box-shadow: 0 0 10px #007BFF; }
+  50% { transform: scale(1.02); box-shadow: 0 0 25px #007BFF; }
+  100% { transform: scale(0.98); box-shadow: 0 0 10px #007BFF; }
+}
+@keyframes pulseBlue {
+  0% {
+    box-shadow: 0 0 10px #007BFF;
+    transform: scale(0.98);
+  }
+  50% {
+    box-shadow: 0 0 25px #007BFF;
+    transform: scale(1.02);
+  }
+  100% {
+    box-shadow: 0 0 10px #007BFF;
+    transform: scale(0.98);
+  }
+}
     .botao-checkout {
       display: inline-block;
       margin-top: 30px;
@@ -175,22 +202,23 @@
       text-decoration: underline;
     }
     .zap-fixo {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      padding: 14px 20px;
-      border-radius: 50px;
-      font-weight: bold;
-      text-decoration: none;
-      box-shadow: 0 0 10px #25D366;
-      z-index: 1000;
-      font-size: 14px;
-    }
-    .zap-fixo:hover {
-      background: #1ebc59;
-    }
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #007BFF; /* azul padrão tema */
+  color: white;
+  padding: 14px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 12px #007BFF;
+  z-index: 1000;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+.zap-fixo:hover {
+  background: #0056d2; /* azul escuro no hover */
+}
     /* Novo: banner do vídeo */
     .banner-video {
       margin-top: -60px;
@@ -235,6 +263,8 @@
   </style>
 </head>
 <body>
+    
+    
   <div id="particles-js"></div>
 
   <section class="hero" data-aos="fade-in">
@@ -251,7 +281,7 @@
       </div>
     </div>
 
-    <h1>Desperte Sua Melhor Versão</h1>
+    <h1>Você não é fraco. Só tá distraído. Esse material vai provar.</h1>
     <p>Ebooks práticos que unem mentalidade e treino para transformar seu corpo e sua rotina — sem enrolação, sem modinha.</p>
     <a href="https://wa.me/5514996966771" class="botao-zap">FALE COMIGO NO WHATSAPP</a>
     <br />
@@ -368,5 +398,76 @@
       retina_detect: true,
     });
   </script>
+  
+  <style>
+  #botao-fim {
+    display: none;
+    position: fixed;
+    bottom: 200px; /* Ajustado aqui */
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #00ff88, #00cc66);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 14px 28px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+    text-decoration: none;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+  }
+
+  #botao-fim.mostrar {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+    animation: bounceIn 0.8s ease forwards, pulse 1.5s infinite;
+  }
+
+  @keyframes bounceIn {
+    0% {
+      transform: translateX(-50%) scale(0.7);
+      opacity: 0;
+    }
+    60% {
+      transform: translateX(-50%) scale(1.1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-50%) scale(1);
+    }
+  }
+
+  @keyframes pulse {
+    0% { box-shadow: 0 0 10px #00ff88; }
+    50% { box-shadow: 0 0 25px #00ff88; }
+    100% { box-shadow: 0 0 10px #00ff88; }
+  }
+</style>
+
+<a id="botao-fim" href="https://pay.kirvano.com/d3b7c99e-302c-490c-a990-8339da13f8a4" target="_blank">
+  💳 Quero Comprar Agora!
+</a>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const botao = document.getElementById('botao-fim');
+
+    window.addEventListener('scroll', function () {
+      const scrolled = window.scrollY + window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight;
+
+      if (scrolled >= docHeight - 150) {
+        botao.classList.add('mostrar');
+      } else {
+        botao.classList.remove('mostrar');
+      }
+    });
+  });
+</script>
+  
 </body>
 </html>
