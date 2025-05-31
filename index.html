@@ -264,6 +264,45 @@
 </head>
 <body>
     
+ <style>
+  #barra-progresso {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background: linear-gradient(90deg, #00fff0, #00ff66);
+    box-shadow: 
+      0 0 10px #00fff0,
+      0 0 20px #00ff66,
+      0 0 30px #00fff0,
+      0 0 40px #00ff66,
+      0 0 50px #00fff0;
+    z-index: 99999;
+    transition: width 0.2s ease-out;
+  }
+</style>
+
+<div id="barra-progresso"></div>
+
+<script>
+  window.addEventListener('scroll', function () {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = (scrollTop / docHeight) * 100;
+    document.getElementById('barra-progresso').style.width = scrolled + '%';
+  });
+</script>
+
+<script>
+    
+  window.addEventListener('scroll', function () {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = (scrollTop / docHeight) * 100;
+    document.getElementById('barra-progresso').style.width = scrolled + '%';
+  });
+</script> 
     
   <div id="particles-js"></div>
 
@@ -477,7 +516,7 @@
   @media (max-width: 768px) {
     #botao-fim {
       font-size: 16px;
-      padding: 12px 20px;
+      padding: 10px 20px;
     }
   }
 </style>
@@ -545,13 +584,13 @@
   @media (max-width: 768px) {
     #botao-fim {
       font-size: 16px;
-      padding: 8px 20px;
+      padding: 6px 30px;
     }
   }
 </style>
 
 <a id="botao-fim" href="https://pay.kirvano.com/d3b7c99e-302c-490c-a990-8339da13f8a4" target="_blank">
-  💳 Quero Comprar!
+  💳 Obter Agora!
 </a>
 
 <script>
