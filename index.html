@@ -10,6 +10,32 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   
   <style>
+  
+  /* Seção banner (vídeo) */
+.banner {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  margin-bottom: 30px;
+
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.25);
+  border: 1.5px solid rgba(0, 255, 136, 0.3);
+  background: linear-gradient(145deg, #121212 0%, #1a1a1a 100%);
+}
+
+/* Seção principal de texto */
+section {
+  background: #1e1e1e;
+  padding: 30px 25px;
+  margin-bottom: 30px;
+
+  border-radius: 15px;
+  border: 1.5px solid rgba(0, 255, 136, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 255, 136, 0.15);
+  backdrop-filter: saturate(180%) blur(8px);
+  -webkit-backdrop-filter: saturate(180%) blur(8px);
+}
+  
     * {
       margin: 0;
       padding: 0;
@@ -95,21 +121,29 @@
   }
 }
     .botao-checkout {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 18px 32px;
-      background: linear-gradient(90deg, #00ff88, #00cc66);
-      color: white;
-      font-weight: bold;
-      font-size: 20px;
-      border-radius: 10px;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0, 255, 136, 0.4);
-      transition: transform 0.2s ease;
-    }
-    .botao-checkout:hover {
-      transform: scale(1.05);
-    }
+  display: inline-block;
+  margin-top: 30px;
+  padding: 18px 32px;
+  background: linear-gradient(90deg, #00ff88, #00cc66);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 255, 136, 0.4);
+  transition: transform 0.2s ease;
+}
+.botao-checkout:hover {
+  transform: scale(1.05);
+}
+
+/* Ajustes para mobile */
+@media (max-width: 768px) {
+  .botao-checkout {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+}
     @keyframes pulse {
       0% { transform: scale(0.98); }
       50% { transform: scale(1.02); }
